@@ -1,4 +1,4 @@
-module.exports = () => {
+module.exports = (sql, params = null) => {
     const mysql = require('mysql');
     const conn = mysql.createConnection({
         host: 'localhost',
@@ -10,7 +10,7 @@ module.exports = () => {
     conn.connect()
 
     return new Promise((resolve, reject) => {
-        conn.query(sql, params = null, (err, result) => {
+        conn.query(sql, params, (err, result) => {
             err ? reject(err) : resolve(result)
         })
         conn.end()

@@ -11,7 +11,6 @@ const express = require('express')
 const utility = require('utility')
 // 加载jsonwebtoken 用于生成加密token字符串
 const jsonwebtoken = require('jsonwebtoken')
-// 加载express-jwt 模块 用于解密 token字符串
 const router = express.Router()
 
 // --------------- 写接口 ---------------
